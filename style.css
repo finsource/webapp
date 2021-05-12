@@ -147,7 +147,7 @@ body {
     list-style-type: none;
 }
 
-li {
+.news-list li {
     margin: 1rem 0;
     font-size: 0.75rem;
 }
@@ -241,4 +241,13 @@ li {
 
 #spotify {
     background-color: rgb(4, 196, 36);
+}
+
+/*added after js*/
+.news-list  a {
+    color: black;
+}
+
+.news-list  a:hover {
+    color: blue;
 }
