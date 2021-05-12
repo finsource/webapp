@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root {
+    --light: #fff;
+    --dark: #000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(71, 76, 88);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    background-color: var(--light);
+    margin: 10rem 5rem;
+    color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1280px;
+    min-width: 60rem;
+}
+
+.header-section {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-section {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 1rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.search-img {
+    opacity: 0.2;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    /* padding: 0rem 1.5rem; */
+    width: 20%;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark);
+    font-size: 0.8rem;
+}
+
+.nav-item-icon {
+    width: 1rem;
+}
+
+.nav-items:hover {
+    background-color: rgb(228, 247, 255);
+}
+
+.nav-items:focus {
+    background-color: antiquewhite;
+}
+
+.middle-column {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.top-content {
+    height: 30%;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.data-part {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.username {
+    font-weight: 300;
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.recent-news,
+.popular-today {
+    background-color: aliceblue;
+    padding: 2rem;
+    width: 50%;
+}
+
+.title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.news-list {
+    list-style-type: none;
+    list-style-type: none;
+}
+
+li {
+    margin: 1rem 0;
+    font-size: 0.75rem;
+}
+
+.topic {
+    margin-bottom: 0.5rem;
+}
+
+.popular-today {
+    width: 50%;
+    background-color: var(--light);
+    list-style-type: none;
+}
+
+.popular-today>li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.right-column {
+    padding: 2rem;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    background-color: rgb(243, 243, 243);
+}
+
+.card {
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    row-gap: 2rem;
+    color: var(--light);
+}
+
+.card-upper,
+.card-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-bottom {
+    font-size: 0.75rem;
+}
+
+.company-icon {
+    width: 4rem;
+    /* background-color: #fff; */
+}
+
+
+/* ///////////////////////// ID Selcetors //////////////////////////// */
+
+#search-text {
+    border: none;
+}
+
+#change1 {
+    color: rgb(0, 256, 0);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+#change2 {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+#dropbox {
+    background-color: rgb(46, 60, 255);
+}
+
+#seagate {
+    background-color: rgb(0, 0, 0);
+}
+
+#facebook {
+    background-color: rgb(23, 54, 110);
+}
+
+#spotify {
+    background-color: rgb(4, 196, 36);
+}
