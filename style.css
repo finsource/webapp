@@ -104,7 +104,9 @@ body {
 
 .top-content {
     height: 30%;
-    background-color: var(--dark);
+    /* background-color: var(--dark); */
+    /* background-color: #000000e0; */
+    background-color: #1b4f8d;
     color: var(--light);
     padding: 2rem;
     display: flex;
@@ -112,6 +114,7 @@ body {
     row-gap: 1rem;
     justify-content: center;
 }
+
 
 .data-part {
     display: flex;
@@ -211,6 +214,27 @@ body {
     /* background-color: #fff; */
 }
 
+
+.footer-section {
+    padding: 0.5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light);
+    background-color: #000000e0;
+}
+
+.footer-left p {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.github-logo {
+    width: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
 
 /* ///////////////////////// ID Selcetors //////////////////////////// */
 
