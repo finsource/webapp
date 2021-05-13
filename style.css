@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: rgb(71, 76, 88);
+    background: linear-gradient(rgba(50, 82, 136, 1), rgba(17, 78, 96, 1));
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -23,7 +23,6 @@ body {
 
 .container {
     background-color: var(--light);
-    margin: 10rem 5rem;
     color: var(--dark);
     display: flex;
     justify-content: space-between;
@@ -31,7 +30,11 @@ body {
     width: 80%;
     max-width: 1280px;
     min-width: 60rem;
+    box-shadow: 1rem 1rem 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    overflow: hidden;
 }
+
 
 .header-section {
     padding: 1rem 2rem;
