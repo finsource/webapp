@@ -1,6 +1,8 @@
 // this is our js file that is displayed via 'dashboard' section of webapp.
 function main() {
     getNews();
+    getStocks();
+
     async function getNews() {
         const response = await fetch("https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=india&region=IN", {
             "method": "GET",
@@ -26,7 +28,6 @@ function main() {
         news5.innerHTML = `<a href = "${data.news[4].link}"><h4>${data.news[4].title}</h4><p>${data.news[4].publisher}</p>`;
         news6.innerHTML = `<a href = "${data.news[5].link}"><h4>${data.news[5].title}</h4><p>${data.news[5].publisher}</p>`;
 
-        getStocks();
     }
 
     async function getStocks() {
@@ -39,8 +40,6 @@ function main() {
 
             const response = await fetch(datapoint);
             const data = await response.json();
-
-            console.log(data);
 
             var date = new Date();
 
@@ -63,30 +62,32 @@ function main() {
             let price = data['Time Series (Daily)'];
             let price_now = price[date];
             price_now = price_now["4. close"];
-            console.log(price_now);
 
             let stock_name = data["Meta Data"];
             stock_name = stock_name["2. Symbol"];
             stock_name = stock_name.split('.');
             let display_name = stock_name[0];
-        
-            // var popular_list = document.getElementById('popular-today');
-            // var list_item_1 = popular_list.querySelector('li');
-
-                
-            var company1 = document.getElementById('first-company');
-            var company2 = document.getElementById('second-company');
-            var company3 = document.getElementById('third-company');
-            var company4 = document.getElementById('fourth-company');
-            var company5 = document.getElementById('fifth-company');
-            var company6 = document.getElementById('sixth-company');
-
-                
-            company1.innerHTML = `<h4>${display_name}</h4><h4 id = "price-of-stock">₹${price_now}</h4>`;
-            
-        }
-        
+                   
+            var list = document.getElementById('popular-today').querySelectorAll('li');
+            list[i].innerHTML = `<h4>${display_name}</h4><h4 id = "price-of-stock">₹${price_now}</h4>`;
+        }        
     }
 }
 
 main();
+
+document.getElementById('dropbox').addEventListener('click' , () => {
+    window.open('https://www.google.com/finance/quote/DBX:NASDAQ');
+});
+
+document.getElementById('seagate').addEventListener('click' , () => {
+    window.open('https://www.google.com/finance/quote/STX:NASDAQ?sa=X&ved=2ahUKEwjK7PX81cbwAhV35nMBHdWxA3IQ_AUoAXoECAEQAw');
+});
+
+document.getElementById('facebook').addEventListener('click' , () => {
+    window.open('https://www.google.com/finance/quote/FB:NASDAQ');
+});
+
+document.getElementById('spotify').addEventListener('click' , () => {
+    window.open('https://www.google.com/finance/quote/SPOT:NYSE');
+});
