@@ -251,3 +251,107 @@ body {
 .news-list  a:hover {
     color: blue;
 }
+
+
+/*
+/////////////////////////////////////////////////////////// CONTACT PAGE STYLES /////////////////////////////////////////////////////////// 
+*/
+
+.contact-us {
+    padding: 2rem;
+    width: 80%;
+    background: #e6efff56;
+}
+
+.contact-design {
+    text-align: center;
+    height: 40%;
+}
+
+.contact-us-image {
+    width: 50%;
+    height: 100%;
+}
+
+.contact-us>h3 {
+    font-weight: 600;
+}
+
+.contact-us>p {
+    font-size: 0.8rem;
+    margin: 0 0 1rem;
+}
+
+label {
+    font-weight: 500;
+    margin-left: 0.25rem;
+}
+
+.contact-area {
+    display: flex;
+    flex-direction: row;
+    /* column-gap: 20%; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+.contact-area-left,
+.contact-area-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact-area-left input {
+    padding: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    background-color: var(--light);
+    width: 50%;
+}
+
+.contact-area-left input:focus,
+textarea:focus {
+    border: 2px solid rgb(81, 177, 255);
+}
+
+.name-section,
+.mail-section,
+.phone-section {
+    margin: 0.5rem 0;
+}
+
+textarea {
+    /* background-color: #e7e7e7; */
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 90%;
+    height: 10rem;
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    box-sizing: border-box;
+}
+
+#submit {
+    cursor: pointer;
+    color: var(--light);
+    margin-top: 0.5rem;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 89, 255, 0.8);
+}
+
+#reset {
+    cursor: pointer;
+    color: var(--light);
+    margin-top: 0.5rem;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.8);
+}
