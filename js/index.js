@@ -60,7 +60,7 @@ function main() {
             date = formatDate(date);
 
             let price = data['Time Series (Daily)'];
-            let price_now = price[date];
+            let price_now = price['2021-04-30'];
             price_now = price_now["4. close"];
 
             let stock_name = data["Meta Data"];
