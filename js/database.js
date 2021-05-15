@@ -1,32 +1,60 @@
-// const app = express();
+var db = openDatabase('../data/database.db' , '1.0' , 'database' , 655535);
 
-// const dataStore = require('nedb');
-// const database = new dataStore('../data/database.db');
+$(function() {
+    $("#submit").click(function(){
+        db.transaction(function(transaction){
+            var sql="CREATE TABLE users "+
+            "(name VARCHAR(20) NOT NULL,"+
+            "email VARCHAR(100) NOT NULL UNIQUE PRIMARY KEY,"+
+            "phone VARCHAR(10) NOT NULL UNIQUE)";
+            transaction.executeSql(sql,undefined,function(){
+                alert("Table is created successfully");
 
-// database.loadDatabase();
+            },
+            
+            function(){
+                alert("Table is already being created");
+            })
+        });
+    });
 
-// window.document.getElementById('submit').addEventListener('click' , () => {
-//     const name = document.getElementById('name_input').value;
-//     const email = document.getElementById('email-input').value;
-//     const phone = document.getElementById('phone-input').value;
+    $('#add').click(function() {
+        var name=$("#name-input").val();
+        var email =$("#email-input").val();
+        var phone = $('#phone-input').val();
 
-//     database.insert(`{name : ${name} , email : ${email} , phone : ${phone}}`);
-// });
 
-function send_data() {
-    const name = document.getElementById('name_input').value;
-    const email = document.getElementById('email-input').value;
-    const phone = document.getElementById('phone-input').value;
+        db.transaction(function(transaction) {
+            var sql="INSERT INTO users (name , email , phone) VALUES(?,?,?)";
+            transaction.executeSql(sql,[name , email , phone ],function() {
+                alert("New item is added successfully");
+            }, 
+            
+            function (transaction,err) {
+                alert(err.message);
+            });
+        });
+    });
+});
 
-    var httpr = new XMLHttpRequest();
-    httpr.open("POST" , "../php/main.php" , true);
-    httpr.setRequestHeader('content-type' , 'application');
+function loadData() {
+	$("#itemlist").children().remove();
+	db.transaction(function(transaction){
+    var sql="SELECT * FROM users ORDER BY id DESC";
+	
+    transaction.executeSql(sql,undefined,function(transaction,result) {
+    if(result.rows.length) {
+        for(var i=0;i<result.rows.length;i++){
 
-    httpr.onreadystatechange = function() {
-        if (httpr.readyState == 4 && httpr.status == 200) {
-            alert('data sent to database!');
+            var row=result.rows.item(i);
+            var name = row.name;
+            var id = row.id;
+            var email = row.email;
+            var phone = row.phone;
+    
+            $("#itemlist").append('<tr id="del'+id+'"><td>'+id+'</td><td>'+ name +'</td><td id="newqty'+id+'">'+ email +'</td><td><a href="#" class="btn btn-danger deleteitem" data-id="'+id+'">Delete</a> <a href="#" class="btn btn-primary updateitem" data-id="'+id+'">Update</a></td></tr>');
         }
-    };
-
-    httpr.send('name =' + name + "email =" + email + "phone = " + phone);
-}
+    } else {
+	    $("#itemlist").append('<tr><td colspan="3" align="center">No Item Found</td></tr>');
+    }
+});

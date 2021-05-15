@@ -361,7 +361,7 @@ textarea {
     box-sizing: border-box;
 }
 
-#submit {
+#submit , #add , #itemlist {
     cursor: pointer;
     color: var(--light);
     margin-top: 0.5rem;
