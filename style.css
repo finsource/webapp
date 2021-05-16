@@ -382,3 +382,56 @@ textarea {
     border: none;
     background-color: rgba(255, 0, 0, 0.8);
 }
+
+/*          for banks.html       */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-self: center;
+}
+
+#ifsc_input {
+    border-radius: 20px;
+    width: 20em;
+    padding: 10px;
+    outline: none;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.output-section {
+    height: 60vh;
+}
+
+.output-table {
+    padding: 3%;
+    margin: 10px 100px;
+}
+
+.output-table td , .output-table th{
+    margin: 0px 20px;
+    padding: 0.35em;
+}
+
+.output-table th {
+    width: 35%;
+}
+
+.welcome-text {
+    display: flex;
+    justify-self: center;
+    font-size:large;
+    margin: 5%;
+    text-align: center;
+}
+
+#submit_ifsc {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 55px;
+    background-color: blueviolet;
+    color: white;
+}
