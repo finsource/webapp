@@ -4,19 +4,18 @@ function main() {
   getStocks();
 
   async function getNews() {
-    const response = await fetch(
-      "https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=india&region=IN",
-      {
-        method: "GET",
-        headers: {
-          "x-rapidapi-key":
-            "64e1b6ec71msh79f17be5fb5db5dp1ecd69jsnb974c96d020c",
-          "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-        },
-      }
-    );
 
+    const response = await fetch("https://seeking-alpha.p.rapidapi.com/news/list-trending", {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "64e1b6ec71msh79f17be5fb5db5dp1ecd69jsnb974c96d020c",
+        "x-rapidapi-host": "seeking-alpha.p.rapidapi.com",
+      },
+    })
+      
     const data = await response.json();
+
+    // console.log(data);
 
     let news1 = document.getElementById("news1");
     let news2 = document.getElementById("news2");
@@ -25,12 +24,15 @@ function main() {
     let news5 = document.getElementById("news5");
     let news6 = document.getElementById("news6");
 
-    news1.innerHTML = `<a href = "${data.news[0].link}"><h4>${data.news[0].title}</h4><p>${data.news[0].publisher}</p>`;
-    news2.innerHTML = `<a href = "${data.news[1].link}"><h4>${data.news[1].title}</h4><p>${data.news[1].publisher}</p>`;
-    news3.innerHTML = `<a href = "${data.news[2].link}"><h4>${data.news[2].title}</h4><p>${data.news[2].publisher}</p>`;
-    news4.innerHTML = `<a href = "${data.news[3].link}"><h4>${data.news[3].title}</h4><p>${data.news[3].publisher}</p>`;
-    news5.innerHTML = `<a href = "${data.news[4].link}"><h4>${data.news[4].title}</h4><p>${data.news[4].publisher}</p>`;
-    // news6.innerHTML = `<a href = "${data.news[5].link}"><h4>${data.news[5].title}</h4><p>${data.news[5].publisher}</p>`;
+    // console.log(data.data[0].attributes.title);
+    // console.log(data.data[0].links.self);
+
+    news1.innerHTML = `<a href = "https://seekingalpha.com/${data.data[0].links.self}"><h4>${data.data[0].attributes.title}</h4>`;
+    news2.innerHTML = `<a href = "https://seekingalpha.com/${data.data[1].links.self}"><h4>${data.data[1].attributes.title}</h4>`;
+    news3.innerHTML = `<a href = "https://seekingalpha.com/${data.data[2].links.self}"><h4>${data.data[2].attributes.title}</h4>`;
+    news4.innerHTML = `<a href = "https://seekingalpha.com/${data.data[3].links.self}"><h4>${data.data[3].attributes.title}</h4>`;
+    news5.innerHTML = `<a href = "https://seekingalpha.com/${data.data[4].links.self}"><h4>${data.data[4].attributes.title}</h4>`;
+    // news6.innerHTML = `<a href = "https://seekingalpha.com/${data.data[5].links.self}"><h4>${data.data[5].attributes.title}</h4>`;
   }
 
   async function getStocks() {
