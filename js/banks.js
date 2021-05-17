@@ -79,6 +79,10 @@ async function getData() {
 
 document.getElementById("submit_ifsc").addEventListener("click", getData);
 
+document.getElementById('reset_ifsc').addEventListener('click',() => {
+    document.getElementById('ifsc_input').value = "";
+});
+
 window.onload = (() => {
     document.getElementById('output').innerHTML = `<p class = "welcome-text" id = "welcome-text">This is the portal where you can enter a bank's IFSC code and get all the information available about the bank.</p>`;
 });
