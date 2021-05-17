@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fin-Source</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel = "icon" href="../Media/logo.svg">
+    <script src="../js/crypto.js" defer></script>
 </head>
+
 <body>
-    
+
+    <div class="container">
+        <div class="header-section">
+            <div class="logo-section">
+                <img src="../Media/logo.svg" width="48px">
+            </div>
+            <div class="search-section">
+                <img class="search-img" src="../Media/search.svg" width="16px">
+                <input type="text" id="search-text" placeholder="Search something . .">
+            </div>
+            <div class="profile-section">
+                <img class="profile-pic" src="../Media/profile-pic.jpg" width="48px">
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-column">
+                <a href="../index.html" class="nav-items">
+                    <img src="../Media/nav-item-icons/dashboard.svg" class="nav-item-icon" class="nav-item-icon">
+                    <p>Dashboard</p>
+                </a>
+
+                <a href="/src/stocks.html" class="nav-items">
+                    <img src="../Media/nav-item-icons/stocks.svg" class="nav-item-icon">
+                    <p>Stocks</p>
+                </a>
+
+                <a href="/src/crypto.html" class="nav-items" style="background-color: rgb(233, 233, 233);">
+                    <img src="../Media/nav-item-icons/cryptocurrency.svg" class="nav-item-icon">
+                    <p>Crypto</p>
+                </a>
+
+                <a href="/src/banks.html" class="nav-items">
+                    <img src="../Media/nav-item-icons/bank-building.svg" class="nav-item-icon">
+                    <p>Indian Banks</p>
+                </a>
+
+                <a href="/src/help.html" class="nav-items">
+                    <img src="../Media/nav-item-icons/technical-support.svg" class="nav-item-icon">
+                    <p>Help and support</p>
+                </a>
+
+                <a href="../src/contact-us.html" class="nav-items">
+                    <img src="../Media/nav-item-icons/contact.svg" class="nav-item-icon">
+                    <p>Contact Us</p>
+                </a>
+            </div>
+            
+            <!-- ENTER YOUR HTML HERE DYNAMICALLY-->
+            <div class="main-content"></div>
+
+        </div>
+        <div class="footer-section ">
+            <div class="footer-left ">
+                <p>Made by : Aditya & Keshav</p>
+            </div>
+            <div class="footer-right ">
+                <a href="https://github.com/finsource/webapp " target="_blank "><img src="../Media/github-logo.svg" class="github-logo "></a>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
