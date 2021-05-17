@@ -1,23 +1,22 @@
-var usdinr;
+var usdinr = 73;
 
 async function getCrypto() {
 
     getExchangeRate();
 
-    const api_key = "3969763ee377cc9568ac8e3dd474c9b5";
-
-    const datapoint = `https://api.coinlayer.com/api/live?access_key=${api_key}`;
+    const datapoint = `http://api.coinlayer.com/api/live?access_key=3969763ee377cc9568ac8e3dd474c9b5`;
 
     const response = await fetch(datapoint);
     const data = await response.json();
 
     var rates = data.rates;
 
-    rates = rates.BTC;
-    rates = Math.round(rates);
+    // rates = rates.BTC;
+    // rates = Math.round(rates);
+    console.log(data);
 
-    document.getElementById("btc-price-usd").innerText = `$${rates}`;
-    document.getElementById("btc-price-inr").innerText = `₹${rates * 72}`;
+    document.getElementById("btc-price-usd").innerText = `$${Math.round(data.rates.BTC)}`;
+    document.getElementById("btc-price-inr").innerText = `₹${Math.round(data.rates.BTC * 72)}`;
 
     document.getElementById("eth-price-usd").innerText = `$${Math.round(data.rates.ETH)}`;
     document.getElementById("eth-price-inr").innerText = `₹${Math.round(data.rates.ETH * usdinr)}`;
@@ -46,10 +45,12 @@ async function getCrypto() {
 
 async function getExchangeRate() {
     const datapoint =
-        "https://api.currencylayer.com/live?access_key=0424ed3a3f445cf194312116ce4a3b6b&format=1";
+        "http://api.currencylayer.com/live?access_key=0424ed3a3f445cf194312116ce4a3b6b&format=1";
 
     const response = await fetch(datapoint);
     const data = await response.json();
+
+    // console.log(data.quotes.USDINR);
 
     usdinr = data.quotes.USDINR;
 
