@@ -6,7 +6,7 @@ async function getCrypto() {
 
     const api_key = "3969763ee377cc9568ac8e3dd474c9b5";
 
-    const datapoint = `http://api.coinlayer.com/api/live?access_key=${api_key}`;
+    const datapoint = `https://api.coinlayer.com/api/live?access_key=${api_key}`;
 
     const response = await fetch(datapoint);
     const data = await response.json();
@@ -46,7 +46,7 @@ async function getCrypto() {
 
 async function getExchangeRate() {
     const datapoint =
-        "http://api.currencylayer.com/live?access_key=0424ed3a3f445cf194312116ce4a3b6b&format=1";
+        "https://api.currencylayer.com/live?access_key=0424ed3a3f445cf194312116ce4a3b6b&format=1";
 
     const response = await fetch(datapoint);
     const data = await response.json();

@@ -1,5 +1,5 @@
 async function getExchangeRate() {
-    const datapoint = "http://api.currencylayer.com/live?access_key=0424ed3a3f445cf194312116ce4a3b6b&format=1";
+    const datapoint = "https://api.currencylayer.com/live?access_key=0424ed3a3f445cf194312116ce4a3b6b&format=1";
     
     const response = await fetch(datapoint);
     const data = await response.json();
