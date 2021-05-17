@@ -396,7 +396,9 @@ textarea {
 /////////////////////////////////////////////////////////// CRYPTO PAGE STYLES /////////////////////////////////////////////////////////// 
 */
 
-.crypto-table {
+
+
+/* .crypto-table {
     width: 50%;
     padding: 1rem;
     border-collapse: collapse;
@@ -408,10 +410,11 @@ textarea {
     align-items: center;
     justify-content: start;
     column-gap: 1rem;
-}
+} */
 
 .crypto-icon {
     width: 2rem;
+    border-radius: 50%;
 }
 
 .crypto-short {
@@ -419,6 +422,8 @@ textarea {
     font-size: 0.75rem;
 }
 
+
+/* 
 .table-label {
     color: rgba(0, 0, 0, 0.5);
 }
@@ -431,38 +436,38 @@ textarea {
 }
 
 .crypto-table td {
-    /* padding: 1rem; */
+    /* padding: 1rem; 
     text-align: start;
-    /* padding: 0.5rem; */
+    padding: 0.5rem; 
     padding: 1rem 0.5rem;
 }
-
+ 
 .crypto-table tr:hover {
     background: rgb(223, 253, 242);
 }
 
 table {
     margin: 1rem 0;
-}
+} */
+
 
 
 /*
 /////////////////////////////// CARD SECTION ///////////////////////////////
 */
-
 .crypto-cards-section {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    padding: 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
 }
 
 .crypto-cards-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 1rem;
-    row-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5rem;
     margin: 1rem auto;
 }
 
@@ -488,7 +493,11 @@ table {
 #bitcoin-card,
 #ethereum-card,
 #litecoin-card,
-#bitcoin-cash-card {
+#bitcoin-cash-card,
+#cardano-card,
+#dogecoin-card,
+#eos-card,
+#stellar-card {
     color: var(--dark);
     padding: 1rem 1.5rem;
     display: flex;
@@ -499,6 +508,17 @@ table {
     box-shadow: 1px 1px 10px 1px #00000026;
     border-radius: 1rem;
     height: 7.5rem;
+}
+
+#bitcoin-card:hover,
+#ethereum-card:hover,
+#litecoin-card:hover,
+#bitcoin-cash-card:hover,
+#cardano-card:hover,
+#dogecoin-card:hover,
+#eos-card:hover,
+#stellar-card:hover {
+    box-shadow: 2px 2px 20px 1px #00000026;
 }
 
 #card-price {
@@ -528,14 +548,9 @@ table {
 }
 
 .buy-btn:hover {
-    background-color: rgb(2, 206, 138);
+    background-color: rgb(0, 182, 121);
 }
 
-.crypto-cards-section,
-.crypto-table {
-    min-height: 25rem;
-    width: 40%;
-}
 
 
 /*
