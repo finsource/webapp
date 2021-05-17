@@ -447,3 +447,28 @@ textarea {
     background-color: blueviolet;
     color: white;
 }
+
+
+/***********  for help.html *****************/
+
+.main-image {
+    width: 20em;
+    text-align: center;
+}
+
+.support-table {
+    margin: 100em 10px;
+}
+
+.support-table td {
+    padding: 1.5em;
+}
+
+.support-table td a {
+    color: blue;
+}
+
+.support-table td a:hover {
+    opacity: 0.45;
+    transition: 0.2s ease;
+}
