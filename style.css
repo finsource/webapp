@@ -166,14 +166,26 @@ body {
     width: 50%;
     background-color: var(--light);
     list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* font-weight: 400; */
 }
 
 .popular-today>li {
+    /* FONT-VARIANT: JIS04; */
+    /* FONT-VARIANT: JIS04; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    /* padding: 1rem; */
+    background-color: #00818f;
+    color: var(--light);
+    border-radius: 0.25rem;
+    padding: 1rem 0.5rem;
 }
 
 .right-column {
