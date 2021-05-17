@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-:root {
+ :root {
     --light: #fff;
     --dark: #000;
 }
@@ -16,8 +16,8 @@ body {
     background: linear-gradient(rgba(50, 82, 136, 1), rgba(17, 78, 96, 1));
     display: flex;
     justify-content: center;
-    height: 100vh;
     align-items: center;
+    height: 100vh;
     width: 100%;
 }
 
@@ -33,8 +33,8 @@ body {
     box-shadow: 1rem 1rem 20px 1px rgba(0, 0, 0, 0.3);
     border-radius: 1rem;
     overflow: hidden;
+    margin: 3rem auto;
 }
-
 
 .header-section {
     padding: 1rem 2rem;
@@ -50,6 +50,7 @@ body {
     column-gap: 1rem;
     align-items: center;
     padding: 0.5rem 1rem;
+    width: 30%;
 }
 
 .search-img {
@@ -93,7 +94,7 @@ body {
 }
 
 .nav-items:focus {
-    background-color: antiquewhite;
+    background-color: rgb(233, 233, 233);
 }
 
 .middle-column {
@@ -114,7 +115,6 @@ body {
     row-gap: 1rem;
     justify-content: center;
 }
-
 
 .data-part {
     display: flex;
@@ -138,7 +138,7 @@ body {
 
 .recent-news,
 .popular-today {
-    background-color: aliceblue;
+    background-color: rgb(223, 239, 255);
     padding: 2rem;
     width: 50%;
 }
@@ -153,39 +153,34 @@ body {
     list-style-type: none;
 }
 
-.news-list li {
+li {
     margin: 1rem 0;
     font-size: 0.75rem;
+    line-height: 2;
 }
 
 .topic {
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .popular-today {
     width: 50%;
     background-color: var(--light);
     list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* font-weight: 400; */
+    /* background: rgba(173, 216, 230, 0.5); */
 }
 
 .popular-today>li {
-    /* FONT-VARIANT: JIS04; */
-    /* FONT-VARIANT: JIS04; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* padding: 1rem; */
-    background-color: #00818f;
-    color: var(--light);
-    border-radius: 0.25rem;
-    padding: 1rem 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(173, 216, 230, 0.397);
+    font-weight: 500;
+    font-size: 1rem;
+    /* border-radius: 1rem; */
 }
 
 .right-column {
@@ -226,7 +221,6 @@ body {
     /* background-color: #fff; */
 }
 
-
 .footer-section {
     padding: 0.5rem 2rem;
     display: flex;
@@ -248,10 +242,12 @@ body {
     border-radius: 50%;
 }
 
+
 /* ///////////////////////// ID Selcetors //////////////////////////// */
 
 #search-text {
     border: none;
+    width: 100%
 }
 
 #change1 {
@@ -280,15 +276,6 @@ body {
 
 #spotify {
     background-color: rgb(4, 196, 36);
-}
-
-/*added after js*/
-.news-list  a {
-    color: black;
-}
-
-.news-list  a:hover {
-    color: blue;
 }
 
 
@@ -373,7 +360,7 @@ textarea {
     box-sizing: border-box;
 }
 
-#submit , #add , #itemlist {
+#submit {
     cursor: pointer;
     color: var(--light);
     margin-top: 0.5rem;
@@ -395,80 +382,265 @@ textarea {
     background-color: rgba(255, 0, 0, 0.8);
 }
 
-/*          for banks.html       */
 
-.main-content {
+/*
+/////////////////////////////////////////////////////////// CRYPTO PAGE STYLES /////////////////////////////////////////////////////////// 
+*/
+
+.crypto-table {
+    width: 50%;
+    padding: 1rem;
+    border-collapse: collapse;
+}
+
+.crypto-name-column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    column-gap: 1rem;
+}
+
+.crypto-icon {
+    width: 2rem;
+}
+
+.crypto-short {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.75rem;
+}
+
+.table-label {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.crypto-table th {
+    background-color: rgb(193, 237, 255);
+    padding: 1rem;
+    text-align: start;
+    padding: 1rem 0.5rem;
+}
+
+.crypto-table td {
+    /* padding: 1rem; */
+    text-align: start;
+    /* padding: 0.5rem; */
+    padding: 1rem 0.5rem;
+}
+
+.crypto-table tr:hover {
+    background: rgb(223, 253, 242);
+}
+
+table {
+    margin: 1rem 0;
+}
+
+
+/*
+/////////////////////////////// CARD SECTION ///////////////////////////////
+*/
+
+.crypto-cards-section {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 1rem;
+}
+
+.crypto-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin: 1rem auto;
+}
+
+.crypto-card-upper {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.crypto-card-bottom {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+#bitcoin-card,
+#ethereum-card,
+#litecoin-card,
+#bitcoin-cash-card {
+    color: var(--dark);
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    row-gap: 1rem;
+    background-color: var(--light);
+    box-shadow: 1px 1px 10px 1px #00000026;
+    border-radius: 1rem;
+    height: 7.5rem;
+}
+
+#card-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+#card-price-change {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(0, 255, 42);
+}
+
+.buy-btn {
+    padding: 0.75rem 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--light);
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    text-align: center;
+    width: auto;
+    background-color: #009b67;
+    transition: 0.3s ease-in-out;
+}
+
+.buy-btn:hover {
+    background-color: rgb(2, 206, 138);
+}
+
+.crypto-cards-section,
+.crypto-table {
+    min-height: 25rem;
+    width: 40%;
+}
+
+
+/*
+
+
+//////////////////////////////////////////////////////////// INDIAN BANKS ////////////////////////////////////////////////////////////
+
+
+*/
+
+.indian-banks {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    background-color: floralwhite;
+    min-height: 35rem;
+}
+
+.bank-image-section {
     width: 100%;
-    justify-self: center;
+    height: 20rem;
+    text-align: center;
+}
+
+.bank-img {
+    height: 100%;
+    margin: auto;
+}
+
+.bank-bottom-section {
+    box-sizing: border-box;
+    padding: 2rem;
+    width: 100%;
+}
+
+.bank-bottom-section>h3 {
+    text-align: center;
+}
+
+.ifsc-section {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 #ifsc_input {
-    border-radius: 20px;
-    width: 20em;
-    padding: 10px;
-    outline: none;
-    text-align: center;
-    border: 1px solid grey;
+    padding: 0.75rem;
+    border: none;
+    width: 12rem;
+    border-radius: 1rem;
+    box-shadow: #00000040 2px 2px 20px 0px;
+    transition: 0.25s;
+}
+
+#ifsc_input:hover,
+#ifsc_input:focus {
+    box-shadow: #0000002a 2px 2px 50px 0px;
+}
+
+#submit_ifsc,
+#reset_ifsc {
+    padding: 0.75rem;
+    border: none;
+    color: var(--light);
+    background-color: #009b67;
+    /* background: repeating-linear-gradient(45deg, #009688, #607d8b); */
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reset_ifsc {
+    background-color: rgb(190, 0, 0);
+}
+
+#reset_ifsc:hover {
+    background-color: rgb(256, 0, 0);
+}
+
+#submit_ifsc:hover {
+    background-color: #00ac72!important;
+}
+
+.ifsc-label-text {
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .output-section {
-    height: 60vh;
+    width: 100%;
+    height: auto;
 }
 
-.output-table {
-    padding: 3%;
-    margin: 10px 100px;
+#output-table {
+    background-color: var(--light);
+    color: var(--dark);
+    width: auto;
+    height: 100%;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    box-shadow: #0000002a 2px 2px 50px 0px;
 }
 
-.output-table td , .output-table th{
-    margin: 0px 20px;
-    padding: 0.35em;
+#output-table th {
+    width: 30%;
+    text-align: right;
+    font-size: 0.8rem;
 }
 
-.output-table th {
-    width: 35%;
-}
-
-.welcome-text {
-    display: flex;
-    justify-self: center;
-    font-size:large;
-    margin: 5%;
-    text-align: center;
-}
-
-#submit_ifsc {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 55px;
-    background-color: blueviolet;
-    color: white;
-}
-
-
-/***********  for help.html *****************/
-
-.main-image {
-    width: 20em;
-    text-align: center;
-}
-
-.support-table {
-    margin: 100em 10px;
-}
-
-.support-table td {
-    padding: 1.5em;
-}
-
-.support-table td a {
-    color: blue;
-}
-
-.support-table td a:hover {
-    opacity: 0.45;
-    transition: 0.2s ease;
+#output-table td {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
 }
