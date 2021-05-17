@@ -12,3 +12,13 @@ const datapoint = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_
 const response = await fetch(datapoint);
 const data = await response.json();
 ```
+
+- <a href = "https://currencylayer.com/quickstart">Exchange rates api</a>
+
+```javascript
+//js/top.js
+async function getExchangeRate() {
+    //code here    
+}
+```
+
