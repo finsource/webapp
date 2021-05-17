@@ -30,7 +30,7 @@ function main() {
     news3.innerHTML = `<a href = "${data.news[2].link}"><h4>${data.news[2].title}</h4><p>${data.news[2].publisher}</p>`;
     news4.innerHTML = `<a href = "${data.news[3].link}"><h4>${data.news[3].title}</h4><p>${data.news[3].publisher}</p>`;
     news5.innerHTML = `<a href = "${data.news[4].link}"><h4>${data.news[4].title}</h4><p>${data.news[4].publisher}</p>`;
-    news6.innerHTML = `<a href = "${data.news[5].link}"><h4>${data.news[5].title}</h4><p>${data.news[5].publisher}</p>`;
+    // news6.innerHTML = `<a href = "${data.news[5].link}"><h4>${data.news[5].title}</h4><p>${data.news[5].publisher}</p>`;
   }
 
   async function getStocks() {

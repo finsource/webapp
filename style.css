@@ -242,6 +242,15 @@ li {
     border-radius: 50%;
 }
 
+.recent-news h4 , .recent-news p {
+    color: var(--dark);
+}
+
+.recent-news h4:hover , .recent-news p:hover {
+    color:blue;
+}
+
+
 
 /* ///////////////////////// ID Selcetors //////////////////////////// */
 
