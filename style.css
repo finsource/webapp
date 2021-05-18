@@ -668,3 +668,108 @@ table {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
 }
+
+
+/*
+
+//////////////////////////////////////////////////////////// HELP AND SUPPORT ////////////////////////////////////////////////////////////
+
+*/
+
+.help-and-support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0074ff3b;
+    padding: 1rem;
+    width: 100%;
+}
+
+.help-and-support-poster-section {
+    height: 20rem;
+    text-align: center;
+}
+
+.help-and-support-poster-image {
+    height: 120%;
+}
+
+.help-and-support-text {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.team-section {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 2rem;
+    width: -webkit-fill-available;
+}
+
+.member-card-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 2rem;
+    margin: 1rem;
+}
+
+.member-card {
+    background-color: var(--light);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 2rem;
+    height: auto;
+    box-shadow: 2px 10px 10px 0px #00000023;
+    transition: 0.25s;
+}
+
+.member-card:hover {
+    box-shadow: 2px 10px 30px 0px #0000003d;
+}
+
+.member-profile-photo {
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.member-card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.member-name {
+    color: var(--dark);
+}
+
+.member-mastery {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.follow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    color: var(--light);
+    background-color: #0065ac;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0 0;
+    width: -webkit-fill-available;
+    transition: 0.25s;
+}
+
+.follow-btn:hover {
+    background-color: #0082df;
+}
