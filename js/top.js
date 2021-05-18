@@ -4,6 +4,7 @@ async function getExchangeRate() {
     const response = await fetch(datapoint);
     const data = await response.json();
 
+    // console.log(data);
     const usdinr = data.quotes.USDINR;
 
     let exchange = document.getElementById('value1');
