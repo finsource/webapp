@@ -10,21 +10,27 @@ async function getCrypto() {
         const response = await fetch(datapoint);
         const data = await response.json();
 
-        console.log(data);
+        // console.log(data);
 
         var one = document.getElementById(`${cards[i]}`);
         
         var card_price = one.getElementsByClassName('card-price');
-            
+
         var price_usd = card_price[0];
 
         price_usd.innerText = `$${data[0].current_price}`;
 
         var card_percent_change = one.getElementsByClassName("card-price-change");
-        console.log(card_percent_change);
+        // console.log(card_percent_change);
         var percent = card_percent_change[0];
 
         percent.innerText = `${data[0].price_change_percentage_24h}%`;
+        
+        if (data[0].price_change_percentage_24h > 0 ) {
+            percent.style.color = "#228B22";
+        } else {
+            percent.style.color = "red";
+        }
     }
 }
 

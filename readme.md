@@ -13,7 +13,7 @@ const response = await fetch(datapoint);
 const data = await response.json();
 ```
 
-- <a href = "https://currencylayer.com/quickstart">Exchange rates api</a>
+- <a href = "https://currencyscoop.p.rapidapi.com/latest">Exchange rates api</a>
 
 ```javascript
 //js/top.js
@@ -22,3 +22,4 @@ async function getExchangeRate() {
 }
 ```
 
+- <a href = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=btc;">Crypto real time data api</a>
