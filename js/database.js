@@ -61,4 +61,4 @@ function loadData() {
     });
 }
 
-document.getElementById('itemlist').addEventListener('click' , loadData());
+document.getElementById('itemlist').addEventListener('click' , loadData);

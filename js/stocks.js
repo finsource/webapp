@@ -1,5 +1,4 @@
 async function getStocks() {
-
     const respone = await fetch(
         "https://latest-stock-price.p.rapidapi.com/price?Indices=NIFTY%2050",
         {
