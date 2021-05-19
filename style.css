@@ -796,3 +796,114 @@ table {
 .follow-btn:hover {
     background-color: #0082df;
 }
+
+
+/* 
+/
+/
+/
+/
+//////////////////////////////////////////////////////////////////////// SMARTPHONE STYLINGS ////////////////////////////////////////////////////////////////////////
+/
+/
+/
+/
+/
+*/
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #0065ac;
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        width: 90%;
+        height: 90%;
+        min-width: 15rem;
+    }
+    .header-section {
+        padding: 0.5rem 1rem;
+    }
+    .logo-section,
+    .profile-section {
+        width: 2rem;
+    }
+    .logo-section>img,
+    .profile-pic {
+        width: 100%;
+    }
+    .search-section {
+        display: none;
+    }
+    .content {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .left-column {
+        width: auto;
+    }
+    .middle-column {
+        width: 100%;
+    }
+    .bottom-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    .recent-news,
+    .popular-today {
+        width: auto;
+        padding: 1rem;
+    }
+    .right-column {
+        width: auto;
+    }
+    .top-content {
+        background-color: #000000e0;
+    }
+    .data-part {
+        column-gap: 0;
+    }
+    .nav-items {
+        justify-content: space-between;
+    }
+    /* 
+        /////////// CRYPTO PAGE //////////
+        */
+    .crypto-cards-section {
+        padding: 1rem 0 1rem 1rem;
+    }
+    .crypto-cards-grid {
+        padding: 1rem;
+        overflow: scroll;
+    }
+    /* 
+        /////////// BANK PAGE //////////
+        */
+    .indian-banks {
+        width: auto;
+        flex-direction: column;
+    }
+    /* 
+        /////////// HELP AND SUPPORT //////////
+        */
+    .help-and-support {
+        width: auto;
+        padding: 0 1rem;
+    }
+    .help-and-support-poster-image {
+        width: 100%;
+    }
+    .team-section {
+        width: auto;
+        border-radius: 0;
+    }
+    .help-and-support-text {
+        width: auto;
+    }
+    .member-card-section {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+}
