@@ -43,9 +43,6 @@ function main() {
       "HINDUNILVR",
       "TCS",
       "ITC",
-      "SBIN",
-      "BAJFINANCE",
-      "TATAMOTORS",
     ];
     const api_key = "M8V83POXXO8543AK";
 
@@ -71,8 +68,14 @@ function main() {
 
       date = formatDate(date);
 
+      // console.log(data);
+      let last_refreshed = data['Meta Data'];
+      last_refreshed = last_refreshed["3. Last Refreshed"];
+
+      // console.log(last_refreshed);
+
       let price = data["Time Series (Daily)"];
-      let price_now = price["2021-04-30"];
+      let price_now = price[last_refreshed];
       price_now = price_now["4. close"];
 
       let stock_name = data["Meta Data"];
