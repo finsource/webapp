@@ -918,15 +918,19 @@ table {
         width: auto;
     }
     .contact-area {
-        flex-direction: row;
+        flex-direction: column;
     }
     .contact-area-left input {
-        width: auto;
+        width: -webkit-fill-available;
     }
     .name-section,
     .mail-section,
     .phone-section {
         margin: 0 0 0.5rem;
+    }
+    .contact-area-left,
+    .contact-area-right {
+        width: auto;
     }
     textarea {
         width: auto;
