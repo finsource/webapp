@@ -906,4 +906,25 @@ table {
         flex-direction: column;
         row-gap: 2rem;
     }
+ /* 
+        /////////// CONTACT PAGE //////////
+        */
+    .contact-us {
+        width: auto;
+    }
+    .contact-area {
+        flex-direction: row;
+    }
+    .contact-area-left input {
+        width: auto;
+    }
+    .name-section,
+    .mail-section,
+    .phone-section {
+        margin: 0 0 0.5rem;
+    }
+    textarea {
+        width: auto;
+        height: 7.5rem;
+    }
 }
