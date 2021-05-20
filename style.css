@@ -356,6 +356,10 @@ textarea:focus {
     border: 2px solid rgb(81, 177, 255);
 }
 
+.contact-area-right .buttons {
+    margin: 1rem 0;
+}
+
 .name-section,
 .mail-section,
 .phone-section {
@@ -374,26 +378,37 @@ textarea {
     box-sizing: border-box;
 }
 
-#submit {
-    cursor: pointer;
+
+#submit,
+#reset {
+    padding: 0.75rem 2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--light);
-    margin-top: 0.5rem;
-    padding: 0.5rem 2rem;
-    width: fit-content;
-    outline: none;
     border: none;
-    background-color: rgba(0, 89, 255, 0.8);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    text-align: center;
+    width: auto;
+    transition: 0.3s ease-in-out;
+}
+
+#submit {
+    background-color: rgb(0, 89, 255);
 }
 
 #reset {
-    cursor: pointer;
-    color: var(--light);
-    margin-top: 0.5rem;
-    padding: 0.5rem 2rem;
-    width: fit-content;
-    outline: none;
-    border: none;
+    background-color: rgb(255, 0, 0);
+}
+
+#submit:hover {
+    background-color: rgba(0, 89, 255, 0.8);
+    box-shadow: 2px 2px 10px 0px #0000003d;
+}
+
+#reset:hover {
     background-color: rgba(255, 0, 0, 0.8);
+    box-shadow: 2px 2px 10px 0px #0000003d;
 }
 
 
@@ -803,6 +818,63 @@ table {
 }
 
 
+/*
+
+//////////////////////////////////////////////////////////// STOCKS PAGE ////////////////////////////////////////////////////////////
+
+*/
+
+#stock1-card,
+#stock2-card,
+#stock3-card,
+#stock4-card,
+#stock5-card,
+#stock6-card,
+#stock7-card,
+#stock8-card {
+    color: var(--dark);
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 1rem;
+    background-color: var(--light);
+    box-shadow: 1px 1px 10px 1px #00000026;
+    border-radius: 1rem;
+    height: 7.5rem;
+    transition: 0.25s;
+}
+
+#stock1-card:hover,
+#stock2-card:hover,
+#stock3-card:hover,
+#stock4-card:hover,
+#stock5-card:hover,
+#stock6-card:hover,
+#stock7-card:hover,
+#stock8-card:hover {
+    box-shadow: 2px 2px 50px 1px #00000026;
+}
+
+.stocks-cards-section {
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.stocks-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    margin: 1rem auto;
+}
+
+.stocks-cards-grid .buy-btn {
+    background-color: #0065ac;
+}
+
+
+
 /* 
 /
 /
@@ -823,9 +895,9 @@ table {
         height: 100%;
     }
     .container {
-        width: 90%;
-        height: 90%;
-        min-width: 15rem;
+        min-width: 100%;
+        margin: 0;
+        border-radius: 0;
     }
     .header-section {
         padding: 0.5rem 1rem;
@@ -911,9 +983,13 @@ table {
         flex-direction: column;
         row-gap: 2rem;
     }
- /* 
+    /* 
         /////////// CONTACT PAGE //////////
         */
+    .contact-us-image {
+        width: 80%;
+        margin: 0 0 2rem;
+    }
     .contact-us {
         width: auto;
     }
@@ -935,5 +1011,19 @@ table {
     textarea {
         width: auto;
         height: 7.5rem;
+    }
+    #submit,
+    #reset {
+        padding: 0.5rem 1rem;
+    }
+    /* 
+        /////////// STOCKS PAGE //////////
+        */
+    .stocks-cards-section {
+        padding: 1rem 0 1rem 1rem;
+    }
+    .stocks-cards-grid {
+        padding: 1rem;
+        overflow: scroll;
     }
 }
