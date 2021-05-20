@@ -1,7 +1,6 @@
 let cryptoDataArray = [];
 let crypto = [];
 
-
 async function getCrypto() {
 
   crypto = [

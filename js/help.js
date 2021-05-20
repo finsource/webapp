@@ -38,3 +38,8 @@ window.onload = (() => {
     table.style.margin = "1em";
     output.style.transition = "0.1s ease";
 });
+
+document.getElementById("search-img").addEventListener("click", () => {
+  let search_input = document.getElementById("search-text").value;
+  window.open(`https://www.google.com/search?q=${search_input}`);
+});

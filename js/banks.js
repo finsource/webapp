@@ -83,6 +83,11 @@ document.getElementById('reset_ifsc').addEventListener('click',() => {
     document.getElementById('ifsc_input').value = "";
 });
 
+document.getElementById("search-img").addEventListener("click", () => {
+  let search_input = document.getElementById("search-text").value;
+  window.open(`https://www.google.com/search?q=${search_input}`);
+});
+
 window.onload = (() => {
     document.getElementById('output').innerHTML = `<p class = "welcome-text" id = "welcome-text">This is the portal where you can enter a bank's IFSC code and get all the information available about the bank.</p>`;
 });

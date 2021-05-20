@@ -31,3 +31,8 @@ document.getElementById('phone-input').addEventListener( 'keyup', () => {
     document.getElementById('phone-input').style.background = "white";
     document.getElementById('phone-input').style.transition = "0.2s ease";
 });
+
+document.getElementById("search-img").addEventListener("click", () => {
+  let search_input = document.getElementById("search-text").value;
+  window.open(`https://www.google.com/search?q=${search_input}`);
+});

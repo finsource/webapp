@@ -46,4 +46,9 @@ async function getStocks() {
     }
 }
 
+document.getElementById('search-img').addEventListener('click' , () => {
+  let search_input = document.getElementById("search-text").value;
+  window.open(`https://www.google.com/search?q=${search_input}`);
+});
+
 window.onload = getStocks();
