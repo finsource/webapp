@@ -1,17 +1,17 @@
 async function getData() {
     let ifsc = document.getElementById("ifsc_input").value;
 
+    if (ifsc == "") {
+        alert("Please enter an IFSC code");
+        return;
+    }
+
     const datapoint = `https://ifsc.razorpay.com/${ifsc}`;
 
     const response = await fetch(datapoint);
     const data = await response.json();
 
     const output = document.getElementById("output");
-
-    if (ifsc == '') {
-        alert("Please enter an IFSC code");
-        return;
-    }
 
     if (data != "Not Found") {
         output.innerHTML =
