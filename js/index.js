@@ -68,7 +68,9 @@ async function getPopularStocks() {
   for (var i=0 ; i<6 ; i++) {
     let display_name = data[i+1].symbol;
     let price_now = data[i+1].lastPrice;
-    list[i].innerHTML = `<h4>${display_name}</h4><h4 id = "price-of-stock">₹${price_now}</h4>`;
+    list[
+      i
+    ].innerHTML = `<h4><a href = "https://www1.nseindia.com/live_market/dynaContent/live_analysis/top_gainers_losers.htm">${display_name}</h4><h4 id = "price-of-stock">₹${price_now}</a></h4>`;
   }
 }
 

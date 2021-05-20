@@ -242,12 +242,17 @@ li {
     border-radius: 50%;
 }
 
-.recent-news h4 , .recent-news p {
+.recent-news h4 , 
+.recent-news p , 
+.popular-today  li a {
     color: var(--dark);
 }
 
-.recent-news h4:hover , .recent-news p:hover {
+.recent-news h4:hover , 
+.recent-news p:hover , 
+.popular-today li a:hover {
     color:blue;
+    transition: 0.3s ease;
 }
 
 
