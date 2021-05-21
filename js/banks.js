@@ -1,6 +1,7 @@
 async function getData() {
     let ifsc = document.getElementById("ifsc_input").value;
 
+    //alerting the user if they press the submit btn without entering any IFSC code.
     if (ifsc == "") {
         alert("Please enter an IFSC code");
         return;
@@ -13,6 +14,7 @@ async function getData() {
 
     const output = document.getElementById("output");
 
+    //data will only be displayed if user's input of IFSC code is correct and it exists in our API
     if (data != "Not Found") {
         output.innerHTML =
             `<table class = "output-table" id = "output-table">
@@ -73,10 +75,12 @@ async function getData() {
 
         </table>`;
     } else {
+        //this is for when a user enters an API which is not available.
         alert("Incorrect ifsc code entered! Please enter correct code again");
     }
 }
 
+//calling our main function on submit btn click.
 document.getElementById("submit_ifsc").addEventListener("click", getData);
 
 document.getElementById('reset_ifsc').addEventListener('click',() => {
@@ -88,6 +92,7 @@ document.getElementById("search-img").addEventListener("click", () => {
   window.open(`https://www.google.com/search?q=${search_input}`);
 });
 
+//Briefing the user about the function of this web page.
 window.onload = (() => {
     document.getElementById('output').innerHTML = `<p class = "welcome-text" id = "welcome-text">This is the portal where you can enter a bank's IFSC code and get all the information available about the bank.</p>`;
 });

@@ -26,13 +26,16 @@ async function getCrypto() {
   ];
 
   for (let i = 0; i < crypto.length; ++i) {
+    // using for loop to simplify process of getting data.
     var datapoint = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${crypto[i]}`;
     const response = await fetch(datapoint);
     const data = await response.json();
 
+    // again implementing for loop for our similarly named Id's to maximize efficiency and minimize code.
     var one = document.getElementById(`${cards[i]}`);
     var card_price = one.getElementsByClassName("card-price");
     var price_usd = card_price[0];
+
     price_usd.innerText = `₹${Math.round((data[0].current_price * 73)*100)/100}`;
     var card_percent_change = one.getElementsByClassName("card-price-change");
 
@@ -51,6 +54,8 @@ async function getCrypto() {
     document.getElementsByTagName("BODY")[0].style.height = "100%";
   }
 
+
+  // this is a function made using chart.js , which gives us accurate chart of % increase and decrease of given crypto currencies.
   function makeChart() {
     let ctx = document.getElementById("crypto-chart");
     let myChart = new Chart(ctx, {

@@ -1,4 +1,4 @@
-console.log('contact.js');
+// Basic Form validation for when the user submits form with no input. 
 
 document.getElementById('submit').addEventListener('click' , (e) => {
 

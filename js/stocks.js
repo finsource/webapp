@@ -11,10 +11,8 @@ async function getStocks() {
     );
 
     const data = await respone.json();
-    //   console.log(data);
 
-    //   const stocks = ['stoc']
-
+    // using for loop for minimizing code and automating trivial jobs.
     for (let i = 1; i <= 8; i++) {
 
         let num = `stock${i}-card`;
