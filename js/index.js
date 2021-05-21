@@ -22,7 +22,7 @@ async function getNews() {
     {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "64e1b6ec71msh79f17be5fb5db5dp1ecd69jsnb974c96d020c",
+        "x-rapidapi-key": "1f036ab3bdmsha432bc3323a6641p1a4a6cjsn47c217d23a5d",
         "x-rapidapi-host": "seeking-alpha.p.rapidapi.com",
       },
     }
