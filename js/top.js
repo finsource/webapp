@@ -47,23 +47,5 @@ function getTime() {
     time_display.style.transition = "0.2s ease";
 }
 
-async function getQuotes() {
-    const response = await fetch("https://famous-quotes4.p.rapidapi.com/random?category=all&count=2", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-key": "64e1b6ec71msh79f17be5fb5db5dp1ecd69jsnb974c96d020c",
-            "x-rapidapi-host": "famous-quotes4.p.rapidapi.com"
-        }
-    })
-
-    const data = await response.json();
-
-    console.log(data);
-
-    document.getElementById('quotes-panel').innerText = data[0].text;
-    document.getElementById('quote-author').innerText = `-${data[0].author}`;
-
-}
-getQuotes();
 window.onload = getExchangeRate();
 setInterval(getTime, 1000);
