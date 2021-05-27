@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
     <script src="../js/crypto.js"></script>
+    <script src="../js/login-others.js" defer></script>
     <title>Fin-Source</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel = "icon" href="../Media/logo.svg">
+    <link rel="icon" href="../Media/logo.svg">
     <script src="../js/crypto.js" defer></script>
 </head>
 
@@ -21,11 +22,12 @@
                 <img src="../Media/logo.svg" width="48px">
             </div>
             <div class="search-section">
-                <img class="search-img" id = "search-img" src="../Media/search.svg" width="16px">
+                <img class="search-img" id="search-img" src="../Media/search.svg" width="16px">
                 <input type="text" id="search-text" placeholder="Search something . .">
             </div>
             <div class="profile-section">
                 <img class="profile-pic" src="../Media/profile-pic.jpg" width="48px">
+                <button id="signed-btn">LOGIN</button>
             </div>
         </div>
         <div class="content">
@@ -35,7 +37,7 @@
                     <p>Dashboard</p>
                 </a>
 
-                <a href= "./stocks.html" class="nav-items">
+                <a href="./stocks.html" class="nav-items">
                     <img src="../Media/nav-item-icons/stocks.svg" class="nav-item-icon">
                     <p>Stocks</p>
                 </a>
@@ -55,12 +57,12 @@
                     <p>Help and support</p>
                 </a>
 
-                <a href= "./contact-us.html" class="nav-items">
+                <a href="./contact-us.html" class="nav-items">
                     <img src="../Media/nav-item-icons/contact.svg" class="nav-item-icon">
                     <p>Contact Us</p>
                 </a>
             </div>
-            
+
             <!-- ENTER YOUR HTML HERE DYNAMICALLY-->
             <div class="crypto-cards-section">
                 <h3 class="trending-text">Popular cryptocoins</h3>
@@ -73,7 +75,7 @@
                         </a>
                         <div class="crypto-card-bottom">
                             <p class="card-price" id="price-usd"></p>
-                            <p class="card-price-change" id = "price-inr"></p>
+                            <p class="card-price-change" id="price-inr"></p>
                         </div>
                         <a href="https://www.binance.com/en/buy-sell-crypto" class="buy-btn" target="_blank">BUY</a>
                     </div>
