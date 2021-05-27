@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fin-Source</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel = "icon" href="../Media/logo.svg">
+    <link rel="icon" href="../Media/logo.svg">
     <script src="../js/stocks.js" defer></script>
+    <script src="../js/login-others.js" defer></script>
 </head>
 
 <body>
@@ -19,11 +20,12 @@
                 <img src="../Media/logo.svg" width="48px">
             </div>
             <div class="search-section">
-                <img class="search-img" id = "search-img" src="../Media/search.svg" width="16px">
+                <img class="search-img" id="search-img" src="../Media/search.svg" width="16px">
                 <input type="text" id="search-text" placeholder="Search something . .">
             </div>
             <div class="profile-section">
                 <img class="profile-pic" src="../Media/profile-pic.jpg" width="48px">
+                <button id="signed-btn">LOGIN</button>
             </div>
         </div>
         <div class="content">
@@ -33,7 +35,7 @@
                     <p>Dashboard</p>
                 </a>
 
-                <a href="./stocks.html" class="nav-items"  style="background-color: rgb(233, 233, 233);">
+                <a href="./stocks.html" class="nav-items" style="background-color: rgb(233, 233, 233);">
                     <img src="../Media/nav-item-icons/stocks.svg" class="nav-item-icon">
                     <p>Stocks</p>
                 </a>
@@ -53,12 +55,12 @@
                     <p>Help and support</p>
                 </a>
 
-                <a href= "./contact-us.html" class="nav-items">
+                <a href="./contact-us.html" class="nav-items">
                     <img src="../Media/nav-item-icons/contact.svg" class="nav-item-icon">
                     <p>Contact Us</p>
                 </a>
             </div>
-            
+
             <!-- ENTER YOUR HTML HERE DYNAMICALLY-->
             <div class="crypto-cards-section">
                 <h3 class="trending-text">Popular Stocks Today</h3>
@@ -71,7 +73,7 @@
                         </a>
                         <div class="crypto-card-bottom">
                             <p class="card-price" id="stock-price"></p>
-                            <p class="card-price-change" id = "stock-price-change"></p>
+                            <p class="card-price-change" id="stock-price-change"></p>
                         </div>
                         <a href="https://www1.nseindia.com/live_market/dynaContent/live_analysis/top_gainers_losers.htm" class="buy-btn" target="_blank">BUY</a>
                     </div>
