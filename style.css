@@ -958,11 +958,11 @@ table {
     }
     .logo-section,
     .profile-section {
-        width: 2rem;
+        width: auto;
     }
     .logo-section>img,
     .profile-pic {
-        width: 100%;
+        width: 2rem;
     }
     .search-section {
         display: none;
