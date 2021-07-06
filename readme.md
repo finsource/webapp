@@ -28,3 +28,7 @@ async function getExchangeRate() {
 - <a href = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=btc;">Crypto real time data api</a>
 
 - <a href = "https://rapidapi.com/suneetk92/api/latest-stock-price">Latest Indian Stock Market prices and data</a>
+
+### Login Credentials for github demo
+Username : root <br />
+password: root
